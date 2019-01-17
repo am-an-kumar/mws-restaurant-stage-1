@@ -131,6 +131,13 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
+
+/* ===================Container for everthing except map in main================== */
+#rest-container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   padding: 5px;
@@ -139,7 +146,6 @@ nav h1 a {
   align-items: center;
 }
 .filter-options h2 {
-
   text-align: center;
   color: white;
   font-weight: normal;
@@ -147,7 +153,7 @@ nav h1 a {
   margin: 0 20px;
 }
 
-/* div containing both the selects... */
+/* ==================div containing both the selects==================== */
 #filter-select{
   display: flex;
 }
@@ -156,7 +162,7 @@ nav h1 a {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
-  font-size: 11pt;
+  font-size: 1em;
   height: 35px;
   letter-spacing: 0;
   margin: 10px;
@@ -166,21 +172,32 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  width: 100%;
+
+  /* flex-container part */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
   background-color: #f3f3f3;
   list-style: outside none none;
-  margin: 0;
-  padding: 30px 15px 60px;
+  padding: 30px 10px;
   text-align: center;
 }
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
-  font-family: Arial,sans-serif;
-  margin: 15px;
+  font-family: Arial,sans-serif;  
+
   min-height: 380px;
-  padding: 0 30px 25px;
-  text-align: left;
-  width: 270px;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin-bottom: 15px;
+  padding: 10px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -191,9 +208,10 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
+
+  text-align: center;
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 14pt;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1.3;
@@ -201,15 +219,14 @@ nav h1 a {
   text-transform: uppercase;
 }
 #restaurants-list p {
+  text-align: center;
   margin: 0;
-  font-size: 11pt;
 }
 #restaurants-list li a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
-  font-size: 10pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
