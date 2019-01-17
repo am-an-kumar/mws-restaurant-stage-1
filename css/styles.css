@@ -189,6 +189,7 @@ nav h1 a {
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
+  box-shadow: 0px 5px 5px #ccc;
   font-family: Arial,sans-serif;  
 
   min-height: 380px;
@@ -325,6 +326,7 @@ body.inside{
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #ccc;
+  box-shadow: 0px 5px 5px #ccc;
   display: block;
   list-style-type: none;
   margin: 0 auto 15px;
