@@ -308,11 +308,11 @@ body.inside{
   color: #666;
 }
 /* ====================review part for a restaurant================== */
-#reviews-container {
-  /* display: none; */
-}
+
 #reviews-container h2 {
   color: #f58500;
+  background-color: rgba(51, 51, 51, 0.7);
+  width: 100%;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -324,10 +324,10 @@ body.inside{
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #ccc;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: 0 auto 15px;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
