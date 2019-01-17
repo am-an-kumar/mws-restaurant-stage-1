@@ -1,28 +1,30 @@
 let restaurant;
 var newMap;
 
-/**
- * Initialize map as soon as the page is loaded.
- */
+// variables/methods to look for are:
+// 1. self
+// 2. L
+// 3. fillBreadCrumb()
+
+// Initialize the map as soon as the page is loaded...
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
 });
 
-/**
- * Initialize leaflet map
- */
+// Initialize leaflet map...
 initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
     } else {      
+      // to make sure a particular area's map is loaded, all we need to do is modify the content of this restaurant variable for which the map is loaded as soon as the page finishes loading...
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        mapboxToken: '<your MAPBOX API KEY HERE>',
+        mapboxToken: 'sk.eyJ1IjoiYW1hbi1rdW1hciIsImEiOiJjanIwZTR0OXIwa2ViNDJwY2czdm56Nm0xIn0.PDVtkEcM5VNjAWcRBIFYvw',
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -35,6 +37,7 @@ initMap = () => {
   });
 }  
  
+// this part is another implementation of the initMap() which is called when the page finishes loading, and it is needed if we are using the google maps api...
 /* window.initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
@@ -79,6 +82,7 @@ fetchRestaurantFromURL = (callback) => {
 /**
  * Create restaurant HTML and add it to the webpage
  */
+// using default parameter to load the self.restaurant if a restaurant is not provided when this method is invoked...
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
@@ -93,7 +97,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
-  // fill operating hours
+  // fill operating hours only if that data is present in the restaurant object...
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
   }
@@ -128,16 +132,17 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
-  container.appendChild(title);
+  container.appendChild(title);//1st DOM call...
 
   if (!reviews) {
     const noReviews = document.createElement('p');
     noReviews.innerHTML = 'No reviews yet!';
-    container.appendChild(noReviews);
+    container.appendChild(noReviews);//another possible DOM call in case there are no reviews for the current restaurant...
     return;
   }
   const ul = document.getElementById('reviews-list');
   reviews.forEach(review => {
+    // 1 DOM call for every review... this is bad???????????????
     ul.appendChild(createReviewHTML(review));
   });
   container.appendChild(ul);
@@ -146,6 +151,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 /**
  * Create review HTML and add it to the webpage.
  */
+// this method is called for every review for a restaurant...
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
