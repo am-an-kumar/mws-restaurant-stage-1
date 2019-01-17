@@ -90,12 +90,12 @@ nav h1 a {
 
 /* this is in the restaurant page and we will fix it later?????????? */
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -131,7 +131,7 @@ nav h1 a {
 /* ===================Container for everthing except map in main================== */
 #rest-container{
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
 }
 
 /* ====================== Restaurant Filtering ====================== */
@@ -141,7 +141,7 @@ nav h1 a {
   background-color: #3397DB;
   align-items: center;
 }
-.filter-options h2 {
+.filter-options>h2 {
   text-align: center;
   color: white;
   font-weight: normal;
@@ -153,12 +153,12 @@ nav h1 a {
 #filter-select{
   padding: 5px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.filter-options select {
+#filter-select select {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
@@ -198,7 +198,7 @@ nav h1 a {
   display: flex;
   flex-flow: column nowrap;
 
-  margin-bottom: 15px;
+  margin-bottom: 0px auto 15px;
   padding: 10px;
 }
 #restaurants-list .restaurant-img {
