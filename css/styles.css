@@ -198,7 +198,7 @@ nav h1 a {
   display: flex;
   flex-flow: column nowrap;
 
-  margin-bottom: 0px auto 15px;
+  margin-bottom: 15px;
   padding: 10px;
 }
 #restaurants-list .restaurant-img {
@@ -237,9 +237,6 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
-body.inside{
-  /* overflow-y: auto; */
-}
 
 .inside header {
   width: 100%;
