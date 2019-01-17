@@ -177,7 +177,7 @@ nav h1 a {
 
   /* flex-container part */
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 
@@ -193,8 +193,9 @@ nav h1 a {
   font-family: Arial,sans-serif;  
 
   min-height: 380px;
-  width: 100%;
+  min-width: 250px;
 
+  /* flex-container part */
   display: flex;
   flex-flow: column nowrap;
 
@@ -336,3 +337,14 @@ nav h1 a {
   margin: 0 0 10px;
 }
 
+
+/* ====================media queries================== */
+@media screen and (min-width: 700px){
+  #restaurants-list li{
+    width: 300px;
+    flex-grow: 1;
+    max-width: 400px;
+
+    margin-right: 10px;
+  }
+}
