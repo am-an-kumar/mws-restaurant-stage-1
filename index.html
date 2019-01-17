@@ -24,19 +24,19 @@
   <main id="maincontent">
     <!-- container for the map of the selected area -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="Map view of restaurants" role="application"></div>
     </section>
     <!-- container for filter options and matching restaurants -->
     <section id="rest-container">
-      <div class="filter-options">
+      <div class="filter-options" aria-label="Filter results">
         <h2>Filter Results</h2>
 
         <div id="filter-select">
-            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Select Neighbourhood">
                 <option value="all">All Neighborhoods</option>
             </select>
               
-            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Select Cuisine">
                 <option value="all">All Cuisines</option>
             </select>
         </div>
@@ -45,7 +45,7 @@
 
       <!-- unordered list for the restaurants that match the neighborhood and cuisines criteria -->
       <!-- it is empty by default -->
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" tabindex="0" aria-label="List of restaurants that match your search"></ul>
     </section>
   </main>
 

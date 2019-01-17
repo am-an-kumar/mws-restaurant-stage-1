@@ -145,6 +145,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
+  console.log(restaurant);
   const li = document.createElement('li');
 
   const image = document.createElement('img');
@@ -166,6 +167,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(address);
 
   const more = document.createElement('a');
+  more.setAttribute('aria-label', `${restaurant.name} in ${restaurant.neighborhood} has ${restaurant.cuisine_type} cuisine`);
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
