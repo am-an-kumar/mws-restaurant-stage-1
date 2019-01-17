@@ -261,10 +261,14 @@ nav h1 a {
 } 
 
 /* ===================restaurant info part====================== */
+#restaurant-and-review-container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 #restaurant-container, #reviews-container{
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 
   width: 100%;
@@ -345,6 +349,16 @@ nav h1 a {
     flex-grow: 1;
     max-width: 400px;
 
+    margin-right: 10px;
+  }
+
+  #restaurant-and-review-container{
+    flex-flow: row wrap;
+  }
+
+  #restaurant-container, #reviews-container{
+    flex-basis: 300px;
+    flex-grow: 1;
     margin-right: 10px;
   }
 }
