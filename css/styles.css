@@ -1,22 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
-body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
-	line-height: 1.5;
+
+/* generic styles start>>>>>>>>>>>>>> */
+*{
+  box-sizing: border-box;
+  margin: 0px;
 }
-body {
-	background-color: #fdfdfd;
-	margin: 0;
-  position:relative;
-  
-  border: 2px solid red;
-}
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
 	color: #333;
 }
 a {
@@ -37,23 +30,55 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+body,td,th,p{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+	line-height: 1.5;
+}
+/* generic styles end<<<<<<<<<<<<<<<<<<<<<<<< */
+
+body, html{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+	background-color: #fdfdfd;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#header{
+  width: 100%;
+  max-height: 20%;
+}
+
 #maincontent {
   background-color: #f3f3f3;
-  min-height: 100%;
+  width: 100%;
+  min-height: 70%;
+  overflow-y: scroll;
 }
 #footer {
   background-color: #444;
   color: #aaa;
-  font-size: 8pt;
+  font-size: 0.8em;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+
+  width: 100%;
+  max-height: 20%;
 }
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  height: 80px;
+  min-height: 80px;
   background-color: #252831;
   text-align:center;
 }
@@ -62,11 +87,12 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
+/* this is in the restaurant page and we will fix it later?????????? */
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
@@ -101,24 +127,31 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  min-height: 400px;
   width: 100%;
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
+  padding: 5px;
   width: 100%;
-  height: 50px;
   background-color: #3397DB;
   align-items: center;
 }
 .filter-options h2 {
+
+  text-align: center;
   color: white;
-  font-size: 1rem;
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
 }
+
+/* div containing both the selects... */
+#filter-select{
+  display: flex;
+}
+
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;

@@ -14,7 +14,7 @@
 
 <body>
   <!-- header of the page -->
-  <header>
+  <header id="header">
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
@@ -31,20 +31,16 @@
       <div class="filter-options">
         <h2>Filter Results</h2>
 
-        <!-- by default, there is only 1 option for neighborhoods -->
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
-          <option value="all">This Neighborhood</option>
-        </select>
-
-        <!-- by default, there is only 1 option for cuisines -->
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-          <option value="chinese">Chinese</option>
-          <option value="continental">Continental</option>
-          <option value="indian">Indian</option>
-          <option value="greek">Greek</option>
-        </select>
+        <div id="filter-select">
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+                <option value="all">All Neighborhoods</option>
+            </select>
+              
+            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+                <option value="all">All Cuisines</option>
+            </select>
+        </div>
+        
       </div>
 
       <!-- unordered list for the restaurants that match the neighborhood and cuisines criteria -->
