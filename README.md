@@ -3,10 +3,11 @@
 ## Contents
 
 - [Restaurant Reviews](#restaurant-reviews)
-    - [Contents](#contents)
     - [Introduction](#introduction)
     - [Dependencies](#dependencies)
+    - [Live link](#live-link)
     - [Using Locally](#using-locally)
+    - [Contributing](#contributing)
     - [Project Overview (Original Udacity README)](#project-overview-original-readme)
         - [Project Overview: Stage 1](#project-overview-stage-1)
             - [Specification](#specification)
@@ -28,11 +29,18 @@ Some part of the code was provided by [Udacity](https://github.com/udacity/mws-r
 - [Mapbox](https://www.mapbox.com/)
 - [normalize.css](https://necolas.github.io/normalize.css/)
 
+## Live Link
+You can visit [this](https://aman-kumar-rai.github.io/mws-restaurant-stage-1/) github static page and play around with the application.
+
 ## Using Locally
 
 Go to the [GitHub repo](https://github.com/aman-kumar-rai/mws-restaurant-stage-1/) for this site and clone it. After that:
 * execute ```npm install``` to install live-server
 * execute ```npm start``` to start a local server which will also open the app in your default browser.
+
+## Contributing
+
+This projects is a demo project, but if you feel like creating a pull request, feel free to do so. Just follow the standard coding practices.
 
 # Project Overview (Original README)
 
