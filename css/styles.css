@@ -184,7 +184,7 @@ nav h1 a {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -414,7 +414,7 @@ nav h1 a {
   }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 700px){
   body{
     font-size: 1.5em;
   }
@@ -425,6 +425,6 @@ nav h1 a {
   }
 
   p, td, a{
-    font-size: 1.2em;
+    font-size: 1.em;
   }
 }
