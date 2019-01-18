@@ -36,23 +36,7 @@ initMap = () => {
     }
   });
 }  
- 
-// this part is another implementation of the initMap() which is called when the page finishes loading, and it is needed if we are using the google maps api...
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
+
 
 /**
  * Get current restaurant from page URL.
@@ -88,7 +72,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
-  address.innerHTML = restaurant.address;
+  address.innerHTML = `<i class='location fa fa-map-marker' aria-hidden='true'></i>${restaurant.address}`;//restaurant.address;
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'

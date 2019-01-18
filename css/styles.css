@@ -272,8 +272,11 @@ nav h1 a {
   align-items: center;
 
   width: 100%;
-  margin-bottom: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
   text-align: center;
+  border: 2px solid #ccc;
+  box-shadow: 0px 5px 5px #ccc;
 }
 
 #restaurant-name {
@@ -287,13 +290,22 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+	width: 100%;
 }
 #restaurant-address {
   text-align: center;
   font-size: 12pt;
   margin: 10px 0px;
+  width: 100%;
 }
+
+/* class for the location icon before address */
+.location{
+  font-size: 1em;
+  padding-right: 5px;
+  color: dodgerblue;
+}
+
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
@@ -304,12 +316,31 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
+
+/* style for restaurant timing table */
+#restaurant-hours{
+  width: 100%;
+  /* max-width: 400px; */
+  background-color: #fff;
+  border: 2px solid #ccc;
+  box-shadow: 0px 5px 5px #ccc;
+}
+
 #restaurant-hours td {
   text-align: center;
   color: #666;
 }
+
+#restaurant-hours tr:nth-child(even){
+  background-color: white;
+}
+
+#restaurant-hours tr:nth-child(odd){
+  background-color: lightgoldenrodyellow;
+}
+
 /* ====================review part for a restaurant================== */
 
 #reviews-container h2 {
