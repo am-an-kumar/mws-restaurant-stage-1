@@ -32,12 +32,14 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
+  const docFrag = document.createDocumentFragment();
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
-    select.append(option);
+    docFrag.append(option);
   });
+  select.append(docFrag);
 }
 
 /**
@@ -59,13 +61,15 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
+  const docFrag = document.createDocumentFragment();
 
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
-    select.append(option);
+    docFrag.append(option);
   });
+  select.append(docFrag);
 }
 
 /**
@@ -135,9 +139,11 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
+  const docFrag = document.createDocumentFragment();
   restaurants.forEach(restaurant => {
-    ul.append(createRestaurantHTML(restaurant));
+    docFrag.append(createRestaurantHTML(restaurant));
   });
+  ul.append(docFrag);
   addMarkersToMap();
 }
 

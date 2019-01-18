@@ -98,6 +98,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
   const hours = document.getElementById('restaurant-hours');
+  const docFrag = document.createDocumentFragment();
   for (let key in operatingHours) {
     const row = document.createElement('tr');
 
@@ -109,8 +110,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     time.innerHTML = operatingHours[key];
     row.appendChild(time);
 
-    hours.appendChild(row);
+    docFrag.appendChild(row);
   }
+  hours.append(docFrag);
 }
 
 /**
@@ -129,10 +131,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
+  const docFrag = document.createDocumentFragment();
   reviews.forEach(review => {
-    // 1 DOM call for every review... this is bad???????????????
-    ul.appendChild(createReviewHTML(review));
+    docFrag.appendChild(createReviewHTML(review));
   });
+  ul.append(docFrag);
   container.appendChild(ul);
 }
 
@@ -151,19 +154,19 @@ createReviewHTML = (review) => {
   date.innerHTML = review.date;
   li.appendChild(date);
 
-  // the code to add star rating goes in here????????????????????
+  // the code to add star rating...
   const rating = document.createElement('p');
+  rating.setAttribute('aria-label', `${review.rating} star rating`);
+  var ratingInnerHTML = rating.innerHTML;
   for(let i=1; i<=5; i++){
     if(i<=review.rating){
-      rating.innerHTML += `<i class='fa fa-star orange'></i>`;
+      ratingInnerHTML += `<i class='fa fa-star orange'></i>`;
     }
     else{
-      rating.innerHTML += `<i class='fa fa-star grey'></i>`;
+      ratingInnerHTML += `<i class='fa fa-star grey'></i>`;
     }
   }
-
-
-  // rating.innerHTML = `Rating: ${review.rating}`;
+  rating.innerHTML = ratingInnerHTML;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
