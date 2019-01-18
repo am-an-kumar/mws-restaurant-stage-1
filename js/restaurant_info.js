@@ -131,7 +131,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
   container.appendChild(title);//1st DOM call...
 
@@ -155,6 +155,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 // this method is called for every review for a restaurant...
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.setAttribute('tabindex', "0");
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
