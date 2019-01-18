@@ -33,6 +33,9 @@ initMap = () => {
       }).addTo(newMap);
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
+
+      // adding the aria-label for restaurant
+      document.querySelector('#map').setAttribute('aria-label', `Map view of ${restaurant.name}`);
     }
   });
 }  
