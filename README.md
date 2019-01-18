@@ -1,6 +1,41 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews
+
+## Contents
+
+- [Restaurant Reviews](#feedreader)
+    - [Contents](#contents)
+    - [Introduction](#introduction)
+    - [Dependencies](#dependencies)
+    - [Using Locally](#using-locally)
+    - [Project Overview (Original Udacity README)](#project-overview-original-rubric)
+        - [Project Overview: Stage 1](##project-overview-stage-1)
+            - [Specification](###specification)
+            - Project Rubric[###project-rubric]
+            - [What do I do from here?](###what-will-i-do-from-here?)
+            
+        - [What will I learn](#what-will-i-learn)
+        - [How will this help my career](#how-will-this-help-my-career)
+    - [How will I complete this project](#how-will-i-complete-this-project)
+
+## Introduction
+
+This is a restaurant reviews application using which you can see the reviews of restaurants that are filtered based on location and cuisine type.
+
+## Dependencies
+
+Some part of the code was provided by [Udacity](https://github.com/udacity/mws-restaurant-stage-1), and a few external resources were used.
+
+- [leafletjs](https://leafletjs.com/)
+- [Mapbox](https://www.mapbox.com/)
+- [normalize.css](https://necolas.github.io/normalize.css/)
+
+## Using Locally
+
+Go to the [GitHub repo](https://github.com/aman-kumar-rai/mws-restaurant-stage-1/) for this site and clone it. After that:
+* execute ```npm install``` to install live-server
+* execute ```npm start``` to start a local server which will also open the app in your default browser.
+
+# Project Overview (Original Rubric)
 
 ## Project Overview: Stage 1
 
