@@ -141,15 +141,26 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   li.setAttribute('tabindex', "0");
   const name = document.createElement('p');
-  name.innerHTML = review.name;
+  name.innerHTML = `<i class='fa fa-user person' aria-hidden='true'></i>${review.name}`;//review.name;
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
   li.appendChild(date);
 
+  // the code to add star rating goes in here????????????????????
   const rating = document.createElement('p');
-  rating.innerHTML = `Rating: ${review.rating}`;
+  for(let i=1; i<=5; i++){
+    if(i<=review.rating){
+      rating.innerHTML += `<i class='fa fa-star orange'></i>`;
+    }
+    else{
+      rating.innerHTML += `<i class='fa fa-star grey'></i>`;
+    }
+  }
+
+
+  // rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
   const comments = document.createElement('p');

@@ -301,8 +301,8 @@ nav h1 a {
 
 /* class for the location icon before address */
 .location{
-  font-size: 1em;
-  padding-right: 5px;
+  font-size: inherit;
+  padding-right: 10px;
   color: dodgerblue;
 }
 
@@ -343,13 +343,11 @@ nav h1 a {
 
 /* ====================review part for a restaurant================== */
 
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
-  background-color: rgba(51, 51, 51, 0.7);
   width: 100%;
-  font-size: 24pt;
   font-weight: 300;
-  letter-spacing: -1px;
+  text-transform: uppercase;
   padding-bottom: 1pt;
 }
 #reviews-list {
@@ -366,8 +364,20 @@ nav h1 a {
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
+  width: 100%;
 }
+
+/* style for the person icon */
+.person{
+  font-size: inherit;
+  color: #f18200;
+  padding-right: 10px;
+}
+
+.orange{
+  color: #f18200;;
+}
+
 #reviews-list li p {
   margin: 0 0 10px;
 }
