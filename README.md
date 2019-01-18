@@ -2,7 +2,7 @@
 
 ## Contents
 
-- [Restaurant Reviews](#feedreader)
+- [Restaurant Reviews](#restaurant-reviews)
     - [Contents](#contents)
     - [Introduction](#introduction)
     - [Dependencies](#dependencies)
@@ -11,11 +11,10 @@
         - [Project Overview: Stage 1](#project-overview-stage-1)
             - [Specification](#specification)
             - [Project Rubric](#project-rubric)
-            - [What do I do from here?](#what-will-i-do-from-here?)
+            - [What do I do from here?](#what-do-i-do-from-here?)
             
-        - [What will I learn](#what-will-i-learn)
-        - [How will this help my career](#how-will-this-help-my-career)
-    - [How will I complete this project](#how-will-i-complete-this-project)
+        - [Leaflet.js and Mapbox:](#leaflet.js-and-mapbox)
+        - [Note about ES6](#note-about-es6)
 
 ## Introduction
 
