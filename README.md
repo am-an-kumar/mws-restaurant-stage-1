@@ -11,9 +11,9 @@
         - [Project Overview: Stage 1](#project-overview-stage-1)
             - [Specification](#specification)
             - [Project Rubric](#project-rubric)
-            - [What do I do from here?](#what-do-i-do-from-here?)
+            - [What do I do from here?](#what-do-i-do-from-here)
             
-        - [Leaflet.js and Mapbox:](#leaflet-js-and-mapbox)
+        - [Leaflet.js and Mapbox:](#leafletjs-and-mapbox)
         - [Note about ES6](#note-about-es6)
 
 ## Introduction
