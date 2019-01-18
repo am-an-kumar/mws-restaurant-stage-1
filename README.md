@@ -7,11 +7,11 @@
     - [Introduction](#introduction)
     - [Dependencies](#dependencies)
     - [Using Locally](#using-locally)
-    - [Project Overview (Original Udacity README)](#project-overview-original-rubric)
-        - [Project Overview: Stage 1](##project-overview-stage-1)
-            - [Specification](###specification)
-            - Project Rubric[###project-rubric]
-            - [What do I do from here?](###what-will-i-do-from-here?)
+    - [Project Overview (Original Udacity README)](#project-overview-original-readme)
+        - [Project Overview: Stage 1](#project-overview-stage-1)
+            - [Specification](#specification)
+            - [Project Rubric](#project-rubric)
+            - [What do I do from here?](#what-will-i-do-from-here?)
             
         - [What will I learn](#what-will-i-learn)
         - [How will this help my career](#how-will-this-help-my-career)
@@ -35,7 +35,7 @@ Go to the [GitHub repo](https://github.com/aman-kumar-rai/mws-restaurant-stage-1
 * execute ```npm install``` to install live-server
 * execute ```npm start``` to start a local server which will also open the app in your default browser.
 
-# Project Overview (Original Rubric)
+# Project Overview (Original README)
 
 ## Project Overview: Stage 1
 
