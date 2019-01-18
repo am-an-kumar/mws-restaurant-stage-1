@@ -1,6 +1,48 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews
+
+## Contents
+
+- [Restaurant Reviews](#restaurant-reviews)
+    - [Introduction](#introduction)
+    - [Dependencies](#dependencies)
+    - [Live link](#live-link)
+    - [Using Locally](#using-locally)
+    - [Contributing](#contributing)
+    - [Project Overview (Original Udacity README)](#project-overview-original-readme)
+        - [Project Overview: Stage 1](#project-overview-stage-1)
+            - [Specification](#specification)
+            - [Project Rubric](#project-rubric)
+            - [What do I do from here?](#what-do-i-do-from-here)
+            
+        - [Leaflet.js and Mapbox:](#leafletjs-and-mapbox)
+        - [Note about ES6](#note-about-es6)
+
+## Introduction
+
+This is a restaurant reviews application using which you can see the reviews of restaurants that are filtered based on location and cuisine type.
+
+## Dependencies
+
+Some part of the code was provided by [Udacity](https://github.com/udacity/mws-restaurant-stage-1), and a few external resources were used.
+
+- [leafletjs](https://leafletjs.com/)
+- [Mapbox](https://www.mapbox.com/)
+- [normalize.css](https://necolas.github.io/normalize.css/)
+
+## Live Link
+You can visit [this](https://aman-kumar-rai.github.io/mws-restaurant-stage-1/) github static page and play around with the application.
+
+## Using Locally
+
+Go to the [GitHub repo](https://github.com/aman-kumar-rai/mws-restaurant-stage-1/) for this site and clone it. After that:
+* execute ```npm install``` to install live-server
+* execute ```npm start``` to start a local server which will also open the app in your default browser.
+
+## Contributing
+
+This projects is a demo project, but if you feel like creating a pull request, feel free to do so. Just follow the standard coding practices.
+
+# Project Overview (Original README)
 
 ## Project Overview: Stage 1
 
